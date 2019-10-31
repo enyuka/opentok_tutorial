@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1= "Embedded OpenTok"
+  p Your Room is #{room}
+  .
+    <iframe src="https://tokbox.com/embed/embed/ot-embed.js?embedId=#{embed_id}&room=#{room}&iframe=true" width="800px" height="640px" scrolling="auto" allow="microphone; camera"></iframe>

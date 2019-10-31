@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1= "OpenTok Tutorial"
+        br
+        p
+            a(href="/embed/?room=1111") Embed
+        br
+        p
+            a(href="/pub/") Pub
+        br
+        p Sub
+        p= error_message
+        form
+            input(name="room_number", maxlength=4, placeholder="部屋番号を入れてください", pattern="^[0-9]+$", required)
+            input(type="submit", formaction="/sub/", formmethod="post")

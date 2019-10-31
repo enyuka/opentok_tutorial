@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p#room_number= room_number
+  button#share(type='button', onclick='shareScreen()') 画面共有
+  button#start(type='button', onclick='startArchive()') 録画開始
+  button#stop(type='button', onclick='stopArchive()', style='display:none') 録画終了
+  div#videos
+    div#subscriber
+    div#publisher
+    div#screen-preview
+  input#session_id(type='hidden', value=session_id)
+  input#token(type='hidden', value=token)
+  input#api_key(type='hidden', value=api_key)
+  script(type='text/javascript', src='/js/session.js')
+
